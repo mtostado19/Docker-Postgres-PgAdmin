@@ -1,19 +1,18 @@
-version: "3.9"
+name: db
 
 services:
   db:
-    image: postgres:15
+    image: postgres:18
     ports:
       - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
-      POSTGRES_DB: dbTask
     #volumes:
       #- postgres_data:/var/lib/postgresql/data
 
   dbAdmin:
-    image: dpage/pgadmin4:9.8
+    image: dpage/pgadmin4:9.16
     ports:
       - 8080:80
     environment:
